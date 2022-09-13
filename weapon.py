@@ -1,6 +1,9 @@
+import random
+
 class Weapon: 
-    def __init__(self, str_name, int_attack_power):
+    def __init__(self, str_name):
         self.name = str_name
-        self.attack_power = int_attack_power
+        self.attack_power = random.randint(15,25)
+
 
 
