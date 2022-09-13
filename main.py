@@ -28,6 +28,5 @@ print(d1.attack_power)
 
 
 d1.attack(r1)
-print(r1.health)
-d1.attack(r1)
+r1.attack(d1)
 

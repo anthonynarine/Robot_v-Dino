@@ -14,9 +14,10 @@ class Battlefield:
         pass
     
     def display_welcome(self):
-        pass
+        print (f"Welcome to this epic battle of {self.dinosaur()} the dinosaur vs. {self.robot()}, the robot.")
 
     def battle_phase(self):
+        
         pass
 
     def display_winner(self):
