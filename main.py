@@ -14,19 +14,14 @@ d1 = Dinosaur("Rexy")
 
 r1 = Robot("tin_man")
 d1 = Dinosaur("Rexy")
+b1 = Battlefield
+
+from battlefield import Battlefield
+from robot import Robot
+from weapon import Weapon
+from dinosaur import Dinosaur
 
 
-print(r1.name)
-print(r1.active_weapon.name)
-print(r1.health)
-
-print ("\nV\n")
-
-print(d1.name)
-print(d1.health)
-print(d1.attack_power)
-
-
-d1.attack(r1)
-r1.attack(d1)
+b1= Battlefield
+b1.run_game()
 
