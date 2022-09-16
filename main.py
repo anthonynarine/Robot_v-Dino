@@ -22,6 +22,6 @@ from weapon import Weapon
 # from dinosaur import Dinosaur
 
 
-b1= Battlefield
+b1= Battlefield()
 b1.run_game()
 
