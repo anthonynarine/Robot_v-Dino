@@ -5,7 +5,7 @@ from weapon import Weapon
 class Robot:
     def __init__(self, str_name):
         self.name = str_name.title()
-        self.health = random.randint(90,100)
+        self.health = 100
         self.active_weapon = Weapon("Longclaw")
 
     def attack (self, dinosaur):
