@@ -36,7 +36,7 @@ class Battlefield:
         if self.robot.health <= 0:
             print (f"Robot {self.robot.name} has been pummeled into a pile a scrap metal") 
         elif self.dinosaur.health <=  0:
-            print (f"Dinosaur {self.dinosaur.name} has vaporized into extinction")        
+            print (f"Dinosaur {self.dinosaur.name} was vaporized to extinction")        
 
 
     def run_game(self):
@@ -45,6 +45,5 @@ class Battlefield:
         while self.dinosaur.health > 0 and self.robot.health > 0:
             self.battle_phase()
         self.display_winner()
-
-    
+        return self.run_game()  
 
