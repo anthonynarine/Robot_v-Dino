@@ -2,12 +2,12 @@
 from dinosaur import Dinosaur
 from robot import Robot
 import random
+import time
 
 class Battlefield:
     def __init__(self):
-        self.dinosaur = Dinosaur   
-        self.robot = Robot
-
+        self.dinosaur = ""  
+        self.robot = ""
 
     def create_player(self):
         user1 = input("Enter the name of your Dinosaur: ")
@@ -23,13 +23,16 @@ class Battlefield:
 
 
     def battle_phase(self):
-        attack_turn = random.randint(1,2)
-        if attack_turn == 1:
-            print ("Dino attacked")
-            self.dinosaur.attack(self.robot)
-        elif attack_turn == 2:
-            print ("Robo attacked")
-            self.robot.attack(self.dinosaur)
+        while self.dinosaur.health > 0 and self.robot.health > 0:
+            attack_turn = random.randint(1,2)
+            time.sleep(1)
+            if attack_turn == 1:
+                print ("Dino attacked")
+                self.dinosaur.attack(self.robot)
+            elif attack_turn == 2:
+                time.sleep(1)
+                print ("Robo attacked")
+                self.robot.attack(self.dinosaur)
 
 
     def display_winner(self):
@@ -40,10 +43,15 @@ class Battlefield:
 
 
     def run_game(self):
-        self.create_player()
         self.welcome()
-        while self.dinosaur.health > 0 and self.robot.health > 0:
-            self.battle_phase()
+        time.sleep(1)
+        self.create_player()
+        time.sleep(1)
+        self.battle_phase()
+        time.sleep(1)
         self.display_winner()
-        return self.run_game()  
+ 
 
+
+b = Battlefield()
+b.run_game()
